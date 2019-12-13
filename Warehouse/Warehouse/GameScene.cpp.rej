@@ -1,0 +1,15 @@
+diff a/Warehouse/Warehouse/GameScene.cpp b/Warehouse/Warehouse/GameScene.cpp	(rejected hunks)
+@@ -7,13 +7,6 @@
+ #include"Box.h"
+ #include"Wall.h"
+ #include"Destination.h"
+-#include"UI.h"
+-#include"TitleUi.h"
+-#include"GameUi.h"
+-#include"MenuUi.h"
+-#include "Cursor.h"
+-#include"ResultUi.h"
+-#include"UiManager.h"
+ #include"ObjectManager.h"
+ #include "HitMove.h"
+ #include"MapCreate.h"
