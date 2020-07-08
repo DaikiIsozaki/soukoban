@@ -77,7 +77,7 @@ void GameScene::Update()
 
 	UiManager::GetInstance()->Update();
 
-	//シーン切り替え//
+	//ここから下シーン切り替え//
 	if (ReportMenuStatus::GetInstance()->GetMenuStatus() == (int)PARTSTYPE::RESET)
 	{
 		ReportScore::GetInstance()->SetPlayerSteps(0);

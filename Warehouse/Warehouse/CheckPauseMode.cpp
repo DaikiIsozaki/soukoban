@@ -26,6 +26,7 @@ void CheckPauseMode::InstanceDelete()
 
 void CheckPauseMode::Update()
 {
+	//ポーズキー押されたら
 	if (Keyinput::Press(VK_ESCAPE))
 	{
 		if (m_bCheck)

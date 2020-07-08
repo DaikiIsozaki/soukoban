@@ -104,6 +104,7 @@
 		}
 	}
 	fclose(fp);
+
 	sprintf(filename, "Map/%s.bin", a);
 	fp = fopen(filename, "wb");
 

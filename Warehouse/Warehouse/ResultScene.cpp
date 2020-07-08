@@ -36,6 +36,7 @@ void ResultScene::Update()
 {
 	UiManager::GetInstance()->Update();
 
+	//‚±‚±‚©‚ç‰ºƒV[ƒ“Ø‚è‘Ö‚¦//
 	if (ReportMenuStatus::GetInstance()->GetMenuStatus() == (int)PARTSTYPE::EXIT)
 	{
 		Manager::GetInstance()->SetEndflag(true);

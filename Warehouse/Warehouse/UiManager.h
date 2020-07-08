@@ -21,7 +21,7 @@ public:
 
 	void Init();
 	void Uninit();
-	void SetSceneType(int state) { _SceneType = state; };
+	void SetSceneType(int state) { m_sceneType = state; };
 	void Update();
 	void Draw();
 
@@ -32,11 +32,11 @@ private:
 	~UiManager() {};
 
 	static UiManager* m_instance;
-	TitleUi* m_titleUi;
+	TitleUi* m_titleUi;				
 	StageSelectUi* m_stageSelectUi;
 	GameUi* m_gameUi;
 	ResultUi* m_resultUi;
 	GameEndUi* m_gameendUi;
-	int _SceneType=0;
+	int m_sceneType=0;
 };
 

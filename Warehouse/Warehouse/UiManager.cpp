@@ -41,7 +41,7 @@ void UiManager::InstanceDelete()
 
 void UiManager::Init()
 {
-	switch (_SceneType)
+	switch (m_sceneType)
 	{
 	case TITLE:
 		m_titleUi = new TitleUi;
@@ -67,7 +67,7 @@ void UiManager::Init()
 
 void UiManager::Uninit()
 {
-	switch (_SceneType)
+	switch (m_sceneType)
 	{
 	case TITLE:
 		m_titleUi->Uninit();
@@ -93,7 +93,7 @@ void UiManager::Uninit()
 
 void UiManager::Update()
 {
-	switch (_SceneType)
+	switch (m_sceneType)
 	{
 	case TITLE:
 		m_titleUi->Update();
@@ -120,7 +120,7 @@ void UiManager::Update()
 
 void UiManager::Draw()
 {
-	switch (_SceneType)
+	switch (m_sceneType)
 	{
 	case TITLE:
 		m_titleUi->Draw();

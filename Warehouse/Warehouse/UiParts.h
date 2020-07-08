@@ -28,8 +28,8 @@ class UiParts
 public:
 
 	virtual void Draw()=0;
-	virtual PARTSTYPE GetType()= 0;
-	virtual void Create(int PosX, int PosY) = 0;
+	virtual PARTSTYPE GetType()= 0;					//タイプのゲッター
+	virtual void Create(int PosX, int PosY) = 0;	
 	virtual int GetPosX() = 0;
 	virtual int GetPosY() = 0;
 

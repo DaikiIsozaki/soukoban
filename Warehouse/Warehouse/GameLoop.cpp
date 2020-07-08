@@ -68,11 +68,6 @@ void GameLoop::Loop()
 
 		if (Manager::GetInstance()->GetEndflag())
 		{
-			/*if (MessageBox(hWnd, "I—¹‚µ‚Ü‚·‚©H", "Exit", MB_YESNO) == IDYES)
-				break;
-			else
-				Manager::GetInstance()->SetEndflag(false);
-				continue;*/
 			break;
 		}
 	}while (ProcessMessage() == 0);

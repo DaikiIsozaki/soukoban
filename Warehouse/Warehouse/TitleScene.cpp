@@ -32,6 +32,7 @@ void TitleScene::Update()
 {
 	UiManager::GetInstance()->Update();
 
+	//‚±‚±‚©‚ç‰ºƒV[ƒ“Ø‚è‘Ö‚¦//
 	if (ReportMenuStatus::GetInstance()->GetMenuStatus() == (int)PARTSTYPE::START)
 	{
 		Scene* nextScene = new StageSelectScene;
