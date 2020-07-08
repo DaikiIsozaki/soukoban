@@ -35,7 +35,7 @@ public:
 
 
 
-	OBJTYPE Get_Type() { return PLAYER; };
+	OBJTYPE Get_Type() { return OBJTYPE::PLAYER; };
 
 private:
 	int m_life = 0;

@@ -54,7 +54,6 @@
     <ClInclude Include="ResultUi.h" />
     <ClInclude Include="Retry.h" />
     <ClInclude Include="Scene.h" />
-    <ClInclude Include="StageMaker.h" />
     <ClInclude Include="StageSelectScene.h" />
     <ClInclude Include="StageSelectUi.h" />
     <ClInclude Include="Start.h" />

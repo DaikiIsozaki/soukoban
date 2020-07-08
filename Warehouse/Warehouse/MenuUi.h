@@ -53,7 +53,7 @@ private:
 	int m_choiceMenu=0;//今選択しているメニュー
 	std::vector<UiParts*> m_uipartsContainer;
 
-	UiParts* m_parts;////メニューパーツ生成用
+	UiParts* m_parts = nullptr;////メニューパーツ生成用
 
 	int m_cursorX = 0;////カーソル用X//
 	int m_cursorY = 0;////カーソル用Y//

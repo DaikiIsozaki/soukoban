@@ -164,9 +164,6 @@
     <ClInclude Include="HitMove.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="StageMaker.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="MapCreate.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>

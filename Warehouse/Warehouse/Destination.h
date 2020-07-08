@@ -28,7 +28,7 @@ public:
 
 	bool GetHitbool() { return _bHit; };
 
-	OBJTYPE Get_Type() { return DESTINATION; };
+	OBJTYPE Get_Type() { return OBJTYPE::DESTINATION; };
 
 private:
 	int m_ghandle = 0;

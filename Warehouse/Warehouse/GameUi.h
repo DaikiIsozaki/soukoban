@@ -19,11 +19,11 @@ public:
 	void Draw();
 
 private:
-	MenuUi* m_menuUi;
-	menuOrder m_menuOrder;
-	Steps* m_steps;
-	MapName* m_mapname;
-	MapSelect* m_mapselect;
+	MenuUi* m_menuUi = nullptr;
+	menuOrder m_menuOrder = {false};
+	Steps* m_steps = nullptr;
+	MapName* m_mapname = nullptr;
+	MapSelect* m_mapselect = nullptr;
 	bool m_bPause = false;	////É|Å[ÉYîªíË//
 };
 

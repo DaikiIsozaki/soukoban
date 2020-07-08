@@ -19,8 +19,8 @@ public:
 	void Draw();
 
 private:
-	MenuUi* m_menuUi;
-	menuOrder m_menuOrder;
-	EndName* m_endName;
+	MenuUi* m_menuUi = nullptr;
+	menuOrder m_menuOrder = { false };
+	EndName* m_endName = nullptr;
 };
 

@@ -27,7 +27,7 @@ public:
 	int Get_PosX() { return _PositionX; };
 	int Get_PosY() { return _PositionY; };
 
-	OBJTYPE Get_Type() { return THIRDWHEEL; };
+	OBJTYPE Get_Type() { return OBJTYPE::THIRDWHEEL; };
 
 private:
 	int m_ghandle = 0;

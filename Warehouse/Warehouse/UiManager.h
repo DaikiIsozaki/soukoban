@@ -32,11 +32,11 @@ private:
 	~UiManager() {};
 
 	static UiManager* m_instance;
-	TitleUi* m_titleUi;				
-	StageSelectUi* m_stageSelectUi;
-	GameUi* m_gameUi;
-	ResultUi* m_resultUi;
-	GameEndUi* m_gameendUi;
+	TitleUi* m_titleUi = nullptr;
+	StageSelectUi* m_stageSelectUi = nullptr;
+	GameUi* m_gameUi = nullptr;
+	ResultUi* m_resultUi = nullptr;
+	GameEndUi* m_gameendUi = nullptr;
 	int m_sceneType=0;
 };
 

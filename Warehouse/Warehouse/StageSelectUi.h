@@ -19,8 +19,8 @@ public:
 	void Draw();
 
 private:
-	MenuUi* m_menuUi;
-	menuOrder m_menuOrder;
-	MapSelect* m_mapselect;
+	MenuUi* m_menuUi = nullptr;
+	menuOrder m_menuOrder = { false };
+	MapSelect* m_mapselect = nullptr;
 };
 

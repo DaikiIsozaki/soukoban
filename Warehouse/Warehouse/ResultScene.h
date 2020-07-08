@@ -17,7 +17,7 @@ public:
 	void Uninit();
 	void Update();
 	void Draw();
-	SCENETYPE Get_Type()const { return RESULT; };
+	SCENETYPE Get_Type()const { return SCENETYPE::RESULT; };
 
 };
 

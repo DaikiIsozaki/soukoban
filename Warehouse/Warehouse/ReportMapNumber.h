@@ -35,7 +35,7 @@ private:
 
 	std::string m_mapinfo;
 	int m_nomber;
-	bool m_clearcheck[MAP_MAX];
+	bool m_clearcheck[MAP_MAX] = { false };
 
 	ReportMapNumber()
 	{

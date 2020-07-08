@@ -41,8 +41,8 @@ private:
 
 
 	static ObjectManager* instance;
-	Object* m_obj;//コンテナに入れるよう
-	std::list<Object*>* m_objContainer;//オブジェクト用コンテナ
+	Object* m_obj = nullptr;//コンテナに入れるよう
+	std::list<Object*>* m_objContainer = nullptr;//オブジェクト用コンテナ
 	unsigned int _DestinationNum = 0;
 
 	//ライフをプレイヤーに持たせない

@@ -29,7 +29,7 @@ public:
 
 	
 
-	OBJTYPE Get_Type() { return BOX; };
+	OBJTYPE Get_Type() { return OBJTYPE::BOX; };
 
 	int Get_Step() { return m_steps; };//” ‚ÌˆÚ“®•à”‚ğ‚ ‚°‚é
 	

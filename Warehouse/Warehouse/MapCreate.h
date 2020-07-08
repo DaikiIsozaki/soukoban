@@ -13,8 +13,8 @@
 class MapCreate
 {
 public:
-	MapCreate() {};
-	~MapCreate() {};
+	MapCreate()=default;
+	~MapCreate()=default;
 
 	int FileLoad(int mapNo);
 

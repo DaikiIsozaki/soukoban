@@ -13,7 +13,7 @@ ThirdWheel::ThirdWheel()
 
 void ThirdWheel::Init()
 {
-	std::srand(std::time(nullptr));
+	std::srand(std::time(nullptr));//‹N“®Žž–ˆ‰ñƒ‰ƒ“ƒ_ƒ€‚É‚È‚é‚æ‚¤‚É
 }
 
 void ThirdWheel::Uninit()

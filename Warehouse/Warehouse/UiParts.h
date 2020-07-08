@@ -34,10 +34,10 @@ public:
 	virtual int GetPosY() = 0;
 
 protected:
-	int _X;////X座標//
-	int _Y;////Y座標//
-	int	_SizeX;////X位置調整用//
-	int _SizeY;////Y位置調整用//
+	int _X = 0;////X座標//
+	int _Y = 0;////Y座標//
+	int	_SizeX = 0;////X位置調整用//
+	int _SizeY = 0;////Y位置調整用//
 
 	int m_texhandle = 0;
 };

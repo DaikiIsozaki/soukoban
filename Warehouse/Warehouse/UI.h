@@ -36,7 +36,7 @@ protected:
 	int	_SizeX = 0;////X位置調整用//
 	int _SizeY = 0;////Y位置調整用//
 
-	RANDOMCOLOR m_randomcolor;
+	RANDOMCOLOR m_randomcolor = { 0 };
 
 	int m_fonthandle = 0;
 };

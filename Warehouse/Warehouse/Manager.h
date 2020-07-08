@@ -37,7 +37,7 @@ private:
 	~Manager() {};
 
 	static Manager* m_instance;
-	Scene* _Scene;
+	Scene* _Scene = nullptr;
 	int _MapNomber=0;
 
 	bool m_bEnd = false;

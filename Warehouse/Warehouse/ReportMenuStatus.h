@@ -26,7 +26,7 @@ public:
 
 private:
 	static ReportMenuStatus* m_pInstance;
-	int m_menuStatus;
+	int m_menuStatus = 0;
 
 	ReportMenuStatus() = default;
 	~ReportMenuStatus() = default;

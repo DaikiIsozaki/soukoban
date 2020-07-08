@@ -30,11 +30,11 @@ public:
 	static ReportScore* GetInstance() { return m_pInstance; };
 
 private:
-	ReportScore() {};
+	ReportScore() = default;
 	~ReportScore() = default;
 
 	static ReportScore* m_pInstance;
-	int m_player_steps = 0;;
+	int m_player_steps = 0;
 	int m_life=0;
 };
 
