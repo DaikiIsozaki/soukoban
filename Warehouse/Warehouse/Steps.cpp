@@ -5,7 +5,7 @@
 
 Steps::Steps()
 {
-	_X = _Y = _SizeX = _SizeY = 0;
+	m_posX = m_posY = m_sizeX = m_sizeY = 0;
 	m_fonthandle = CreateFontToHandle(NULL, FONT_SIZE, 3);
 }
 
@@ -18,21 +18,21 @@ void Steps::Update()
 void Steps::Draw()
 {
 
-	DrawStringToHandle(_X* FONT_SIZE + _SizeX, _Y* FONT_SIZE + _SizeY,
+	DrawStringToHandle(m_posX* FONT_SIZE + m_sizeX, m_posY* FONT_SIZE + m_sizeY,
 		(m_steps_player + m_stepsnum_player).c_str(), GetColor(255, 255, 255), m_fonthandle);
-	DrawStringToHandle(_X* FONT_SIZE + _SizeX, _Y* FONT_SIZE + _SizeY + 50, 
+	DrawStringToHandle(m_posX* FONT_SIZE + m_sizeX, m_posY* FONT_SIZE + m_sizeY + 50, 
 		(m_life_player + m_lifenum_player).c_str(), GetColor(255, 255, 255), m_fonthandle);
 
 }
 
 void Steps::Create(int x, int y, bool result)
 {	
-	_X = x;
-	_Y = y;
+	m_posX = x;
+	m_posY = y;
 
 	if (result)
 	{
-		_SizeX = (SCREEN_X  - (6 * FONT_SIZE)) / 2;////6…表示するstringの1列の文字数
-		_SizeY = (SCREEN_Y - 1) / 2;
+		m_sizeX = (SCREEN_X  - (6 * FONT_SIZE)) / 2;////6…表示するstringの1列の文字数
+		m_sizeY = (SCREEN_Y - 1) / 2;
 	}
 }

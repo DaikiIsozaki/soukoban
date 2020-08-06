@@ -23,10 +23,10 @@ public:
 	void Create(int x, int y, int sizeX, int sizeY);
 	void Destroy();
 
-	int Get_PosX() { return _PositionX; };
-	int Get_PosY() { return _PositionY; };
+	int Get_PosX() { return m_positionX; };
+	int Get_PosY() { return m_positionY; };
 
-	bool GetHitbool() { return _bHit; };
+	bool GetHitbool() { return m_bHit; };
 
 	OBJTYPE Get_Type() { return OBJTYPE::DESTINATION; };
 

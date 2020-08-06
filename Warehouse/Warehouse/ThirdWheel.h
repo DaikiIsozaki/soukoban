@@ -24,8 +24,8 @@ public:
 	void Create(int x, int y, int sizeX, int sizeY);
 	void Destroy();
 
-	int Get_PosX() { return _PositionX; };
-	int Get_PosY() { return _PositionY; };
+	int Get_PosX() { return m_positionX; };
+	int Get_PosY() { return m_positionY; };
 
 	OBJTYPE Get_Type() { return OBJTYPE::THIRDWHEEL; };
 

@@ -23,20 +23,20 @@ void Destination::Update()
 
 void Destination::Draw()
 {
-	_bHit = false;
+	m_bHit = false;
 	if (!HitMove::Get_Instance()->Hit(this))
 	{
-		DrawGraph((_PositionX* OBJ_SIZE + _SizeX), _PositionY* OBJ_SIZE + _SizeY, m_ghandle, TRUE);
+		DrawGraph((m_positionX* OBJ_SIZE + m_sizeX), m_positionY* OBJ_SIZE + m_sizeY, m_ghandle, TRUE);
 	}
-	else _bHit = true;
+	else m_bHit = true;
 }
 
 void Destination::Create(int x, int y, int sizeX, int sizeY)
 {
-	_PositionX = x;
-	_PositionY = y;
-	_SizeX = sizeX;
-	_SizeY = sizeY;
+	m_positionX = x;
+	m_positionY = y;
+	m_sizeX = sizeX;
+	m_sizeY = sizeY;
 }
 
 

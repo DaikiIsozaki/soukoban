@@ -29,16 +29,16 @@ public:
 	static Manager* GetInstance() { return m_instance; };
 	void SetEndflag(bool flag) { m_bEnd = flag; };//èIóπîªíf
 	bool GetEndflag() { return m_bEnd; };//èIóπîªíf
-	void SetMapNomber(int nextmapNo) { _MapNomber = nextmapNo; };
-	void NextMapSelect() { _MapNomber++; };
+	void SetMapNomber(int nextmapNo) { m_mapNomber = nextmapNo; };
+	void NextMapSelect() { m_mapNomber++; };
 
 private:
 	Manager();
 	~Manager() {};
 
 	static Manager* m_instance;
-	Scene* _Scene = nullptr;
-	int _MapNomber=0;
+	Scene* m_scene = nullptr;
+	int m_mapNomber=0;
 
 	bool m_bEnd = false;
 };

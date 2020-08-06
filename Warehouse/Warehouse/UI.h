@@ -31,10 +31,10 @@ public:
 protected:
 	
 
-	int _X=0;////X座標//
-	int _Y=0;////Y座標//
-	int	_SizeX = 0;////X位置調整用//
-	int _SizeY = 0;////Y位置調整用//
+	int m_posX=0;////X座標//
+	int m_posY=0;////Y座標//
+	int	m_sizeX = 0;////X位置調整用//
+	int m_sizeY = 0;////Y位置調整用//
 
 	RANDOMCOLOR m_randomcolor = { 0 };
 

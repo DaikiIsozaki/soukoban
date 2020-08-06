@@ -18,7 +18,7 @@ public:
 	void Draw()override;
 	void Create(int PosX, int PosY)override;
 	PARTSTYPE GetType()override { return PARTSTYPE::RETRY; };
-	int GetPosX()override { return _X; };
-	int GetPosY()override { return _Y; };
+	int GetPosX()override { return m_posX; };
+	int GetPosY()override { return m_posY; };
 };
 

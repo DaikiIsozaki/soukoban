@@ -18,7 +18,7 @@ void EndName::Draw()
 {
 	
 
-	DrawStringToHandle(_X* FONT_SIZE + _SizeX, _Y* FONT_SIZE + _SizeY - 50,
+	DrawStringToHandle(m_posX* FONT_SIZE + m_sizeX, m_posY* FONT_SIZE + m_sizeY - 50,
 		m_endName.c_str(),
 		GetColor(m_randomcolor.r, m_randomcolor.g, m_randomcolor.b),m_fonthandle);
 	
@@ -26,11 +26,11 @@ void EndName::Draw()
 
 void EndName::Create(int x, int y)
 {
-	_X = x;
-	_Y = y;
+	m_posX = x;
+	m_posY = y;
 
 	int a=m_endName.length();
-	_SizeX = (SCREEN_X - (11*FONT_SIZE))/2;////11…表示するstringの1列の文字数
-	_SizeY = (SCREEN_Y - 1) / 2;
+	m_sizeX = (SCREEN_X - (11*FONT_SIZE))/2;////11…表示するstringの1列の文字数
+	m_sizeY = (SCREEN_Y - 1) / 2;
 }
 

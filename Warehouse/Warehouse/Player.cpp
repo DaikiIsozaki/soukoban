@@ -57,27 +57,27 @@ void Player::Update()
 		HitMove::Get_Instance()->MoveThis(this, 1, 0);
 	}
 
-	_OldPosX=_PositionX;
-	_OldPosY=_PositionY;
+	m_oldPosX=m_positionX;
+	m_oldPosY=m_positionY;
 
 }
 
 void Player::Draw()
 {
 	if(ReportScore::GetInstance()->GetLife()==LIFE)
-	DrawGraph(_PositionX* OBJ_SIZE + _SizeX, _PositionY* OBJ_SIZE + _SizeY, m_ghandle,TRUE);
+	DrawGraph(m_positionX* OBJ_SIZE + m_sizeX, m_positionY* OBJ_SIZE + m_sizeY, m_ghandle,TRUE);
 
 	if (ReportScore::GetInstance()->GetLife() == 2)
-		DrawGraph(_PositionX* OBJ_SIZE + _SizeX, _PositionY* OBJ_SIZE + _SizeY, m_ghandle2, TRUE);
+		DrawGraph(m_positionX* OBJ_SIZE + m_sizeX, m_positionY* OBJ_SIZE + m_sizeY, m_ghandle2, TRUE);
 
 	if (ReportScore::GetInstance()->GetLife() == 1)
-		DrawGraph(_PositionX* OBJ_SIZE + _SizeX, _PositionY* OBJ_SIZE + _SizeY, m_ghandle3, TRUE);
+		DrawGraph(m_positionX* OBJ_SIZE + m_sizeX, m_positionY* OBJ_SIZE + m_sizeY, m_ghandle3, TRUE);
 }
 
 void Player::Move(int move_x, int move_y)
 {
-	_PositionX += move_x;
-	_PositionY += move_y;
+	m_positionX += move_x;
+	m_positionY += move_y;
 	m_steps++;
 
 	ReportScore::GetInstance()->SetPlayerSteps(m_steps);
@@ -85,10 +85,10 @@ void Player::Move(int move_x, int move_y)
 
 void Player::Create(int x, int y, int sizeX, int sizeY)
 {
-	_PositionX = x;
-	_PositionY = y;
-	_SizeX = sizeX;
-	_SizeY = sizeY;
+	m_positionX = x;
+	m_positionY = y;
+	m_sizeX = sizeX;
+	m_sizeY = sizeY;
 }
 
 void Player::Destroy()

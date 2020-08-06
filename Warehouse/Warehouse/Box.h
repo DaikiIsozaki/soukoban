@@ -22,10 +22,10 @@ public:
 	void Create(int x, int y, int sizeX, int sizeY);
 	void Destroy();
 
-	int Get_PosX() { return _PositionX; };
-	int Get_PosY() { return _PositionY; };
-	int Get_OldPosX() { return _OldPosX; };
-	int Get_OldPosY() { return _OldPosY; };
+	int Get_PosX() { return m_positionX; };
+	int Get_PosY() { return m_positionY; };
+	int Get_OldPosX() { return m_oldPosX; };
+	int Get_OldPosY() { return m_oldPosY; };
 
 	
 

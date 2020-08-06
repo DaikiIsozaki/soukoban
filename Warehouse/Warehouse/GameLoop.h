@@ -24,7 +24,7 @@ public:
 	void Uninit();
 	void Update();
 	void Draw();
-	static auto Get_Instance() { return instance; };
+	static auto Get_Instance() { return m_instance; };
 
 	
 
@@ -32,7 +32,7 @@ private:
 	GameLoop() = default;
 	~GameLoop() = default;
 
-	static GameLoop* instance;
+	static GameLoop* m_instance;
 	
 };
 

@@ -11,7 +11,7 @@
 #include "HitMove.h"
 
 //インスタンス初期化
-ObjectManager* ObjectManager::instance = nullptr;
+ObjectManager* ObjectManager::m_instance = nullptr;
 
 ObjectManager::ObjectManager()
 {
@@ -27,18 +27,18 @@ ObjectManager::~ObjectManager()
 
 void ObjectManager::InstanceCreate()
 {
-	if (instance == nullptr)
+	if (m_instance == nullptr)
 	{
-		instance = new ObjectManager;
+		m_instance = new ObjectManager;
 	}
 }
 
 void ObjectManager::InstanceDelete()
 {
-	if (instance != nullptr)
+	if (m_instance != nullptr)
 	{
-		delete instance;
-		instance = nullptr;
+		delete m_instance;
+		m_instance = nullptr;
 	}
 }
 
@@ -102,7 +102,7 @@ void ObjectManager::Draw()
 	case DESTINATION:
 		m_obj = new Destination;
 		m_obj->Create(x, y, sizeX, sizeY);
-		_DestinationNum++;
+		m_destinationNum++;
 		break;
 	case THIRDWHEEL:
 		m_obj = new ThirdWheel;

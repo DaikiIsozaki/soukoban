@@ -19,9 +19,9 @@ public:
 	void Update();
 	void Draw();
 
-	SCENETYPE Get_Type()const { return STAGESELECT; };
+	SCENETYPE Get_Type()const { return SCENETYPE::STAGESELECT; };
 
 private:
-	int a = 0;
+	
 };
 

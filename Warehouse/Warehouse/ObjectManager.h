@@ -28,7 +28,7 @@ public:
 	void Update();
 	void Draw();
 	void AddObj(int type,int x,int y,int sizeX,int sizeY);//コンテナにオブジェクトを入れる
-	static auto Get_Instance() { return instance; };
+	static auto Get_Instance() { return m_instance; };
 	bool ClearCheck();
 	void Reset();
 
@@ -40,10 +40,10 @@ private:
 	~ObjectManager();
 
 
-	static ObjectManager* instance;
+	static ObjectManager* m_instance;
 	Object* m_obj = nullptr;//コンテナに入れるよう
 	std::list<Object*>* m_objContainer = nullptr;//オブジェクト用コンテナ
-	unsigned int _DestinationNum = 0;
+	unsigned int m_destinationNum = 0;
 
 	//ライフをプレイヤーに持たせない
 };

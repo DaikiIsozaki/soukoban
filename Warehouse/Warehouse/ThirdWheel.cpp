@@ -46,7 +46,7 @@ void ThirdWheel::Update()
 
 void ThirdWheel::Draw()
 {
-	DrawGraph((_PositionX* OBJ_SIZE + _SizeX)+m_fidgetingX, (_PositionY* OBJ_SIZE + _SizeY)+m_fidgetingY, m_ghandle, FALSE);
+	DrawGraph((m_positionX* OBJ_SIZE + m_sizeX)+m_fidgetingX, (m_positionY* OBJ_SIZE + m_sizeY)+m_fidgetingY, m_ghandle, FALSE);
 }
 
 void ThirdWheel::Move(int move_x, int move_y)
@@ -54,16 +54,16 @@ void ThirdWheel::Move(int move_x, int move_y)
 	//óêêîÇŸÇºÇÒÇÊÇ§
 	int x = 0;
 	int y = 0;
-	_OldPosX = _PositionX;
-	_OldPosY = _PositionY;
+	m_oldPosX = m_positionX;
+	m_oldPosY = m_positionY;
 	std::random_device seed_gen;
 	std::default_random_engine engine(seed_gen());
 	std::uniform_int_distribution<> dist(-1, 1);
 
 	if (HitMove::Get_Instance()->MoveOther(this, move_x, move_y))
 	{
-		_PositionX += move_x;
-		_PositionY += move_y;
+		m_positionX += move_x;
+		m_positionY += move_y;
 
 		if (HitMove::Get_Instance()->Hit(this))
 		{
@@ -71,30 +71,30 @@ void ThirdWheel::Move(int move_x, int move_y)
 			y = dist(engine);
 			if (HitMove::Get_Instance()->MoveOther(this, x, y))
 			{
-				_PositionX += x;
-				_PositionY += y;
+				m_positionX += x;
+				m_positionY += y;
 			}
 			else
 			{
-				_PositionX -= x;
-				_PositionY -= y;
+				m_positionX -= x;
+				m_positionY -= y;
 			}
 		}
 	}
 
 	if (HitMove::Get_Instance()->Hit(this))
 	{
-		_PositionX = _OldPosX;
-		_PositionY = _OldPosY;
+		m_positionX = m_oldPosX;
+		m_positionY = m_oldPosY;
 	}
 }
 
 void ThirdWheel::Create(int x, int y, int sizeX, int sizeY)
 {
-	_PositionX = x;
-	_PositionY = y;
-	_SizeX = sizeX;
-	_SizeY = sizeY;
+	m_positionX = x;
+	m_positionY = y;
+	m_sizeX = sizeX;
+	m_sizeY = sizeY;
 }
 
 void ThirdWheel::Destroy()

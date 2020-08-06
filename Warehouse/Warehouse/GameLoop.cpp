@@ -27,24 +27,24 @@
 #include "GameLoop.h"
 #include"main.h"
 
-GameLoop* GameLoop::instance = nullptr;
+GameLoop* GameLoop::m_instance = nullptr;
 
 HWND hWnd;
 
 void GameLoop::Create()
 {
-	if (instance == nullptr)
+	if (m_instance == nullptr)
 	{
-		instance =new GameLoop;
+		m_instance =new GameLoop;
 	}
 }
 
 void GameLoop::Delete()
 {
 	
-	if (instance != nullptr)
+	if (m_instance != nullptr)
 	{
-		delete instance;
+		delete m_instance;
 	}
 }
 

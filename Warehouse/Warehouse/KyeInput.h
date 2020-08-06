@@ -12,7 +12,7 @@ public:
 	static bool Release(int keyinput);
 
 private:
-	static BYTE Buff[INPUT_SIZE];
-	static BYTE Old_Buff[INPUT_SIZE];
+	static BYTE m_buff[INPUT_SIZE];
+	static BYTE m_oldBuff[INPUT_SIZE];
 };
 

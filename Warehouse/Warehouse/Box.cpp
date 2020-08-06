@@ -31,14 +31,14 @@ void Box::Draw()
 {
 	if (HitMove::Get_Instance()->Hit(this))
 	{
-		DrawGraph(_PositionX* OBJ_SIZE + _SizeX, _PositionY* OBJ_SIZE + _SizeY, m_ghandle2,FALSE);
-		_bHit = true;
+		DrawGraph(m_positionX* OBJ_SIZE + m_sizeX, m_positionY* OBJ_SIZE + m_sizeY, m_ghandle2,FALSE);
+		m_bHit = true;
 	}
 	else
 	{
-		DrawGraph((_PositionX* OBJ_SIZE + _SizeX), _PositionY* OBJ_SIZE + _SizeY, m_ghandle, FALSE);
+		DrawGraph((m_positionX* OBJ_SIZE + m_sizeX), m_positionY* OBJ_SIZE + m_sizeY, m_ghandle, FALSE);
 		/*DrawString(_PositionX* OBJ_SIZE + _SizeX, _PositionY* OBJ_SIZE + _SizeY, "¡", GetColor(255, 255, 255));*/
-		_bHit = false;
+		m_bHit = false;
 	}
 }
 
@@ -47,17 +47,17 @@ void Box::Move(int move_x, int move_y)
 
 	if(HitMove::Get_Instance()->MoveOther(this,move_x,move_y))
 	{
-		_PositionX += move_x;
-		_PositionY += move_y;
+		m_positionX += move_x;
+		m_positionY += move_y;
 	}	
 }
 
 void Box::Create(int x, int y, int sizeX, int sizeY)
 {
-	_PositionX = x;
-	_PositionY = y;
-	_SizeX = sizeX;
-	_SizeY = sizeY;
+	m_positionX = x;
+	m_positionY = y;
+	m_sizeX = sizeX;
+	m_sizeY = sizeY;
 
 }
 

@@ -34,7 +34,7 @@ Manager::Manager()
 {
 	UiManager::InstanceCreate();
 	ObjectManager::InstanceCreate();
-	_Scene = new TitleScene;
+	m_scene = new TitleScene;
 }
 
 void Manager::InstanceCreate()
@@ -57,12 +57,12 @@ void Manager::Init()
 	ReportMenuStatus::InstanceCrearte();
 	ReportMapNumber::InstanceCrearte();
 	CheckPauseMode::InstanceCrearte();
-	_Scene->Init(_MapNomber);
+	m_scene->Init(m_mapNomber);
 }
 
 void Manager::Uninit()
 {
-	_Scene->Uninit();	
+	m_scene->Uninit();	
 	UiManager::InstanceDelete();
 	ObjectManager::InstanceDelete();
 	ReportMapNumber::InstanceDelete();
@@ -74,24 +74,24 @@ void Manager::Uninit()
 void Manager::Update()
 {
 	CheckPauseMode::GetInstance()->Update();
-	_Scene->Update();
+	m_scene->Update();
 }
 
 void Manager::Draw()
 {
-	_Scene->Draw();
+	m_scene->Draw();
 }
 
 void Manager::SceneChange(Scene* nextScene)
 {
-	if (_Scene)
+	if (m_scene)
 	{
-		_Scene->Uninit();
-		delete _Scene;
-		_Scene = nullptr;
-		_Scene = nextScene;
-		_Scene->Init(_MapNomber);
-		ReportMapNumber::GetInstance()->SetNumber(_MapNomber);
+		m_scene->Uninit();
+		delete m_scene;
+		m_scene = nullptr;
+		m_scene = nextScene;
+		m_scene->Init(m_mapNomber);
+		ReportMapNumber::GetInstance()->SetNumber(m_mapNomber);
 		
 	}
 }

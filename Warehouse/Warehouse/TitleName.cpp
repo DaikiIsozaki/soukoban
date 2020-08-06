@@ -12,20 +12,20 @@ TitleName::TitleName()
 
 void TitleName::Update()
 {
-	if (frame % 5 == 0)
+	if (m_frame % 5 == 0)
 	{
 		m_randomcolor.r = rand() % MAX_COLOR;
 		m_randomcolor.g = rand() % MAX_COLOR;
 		m_randomcolor.b = rand() % MAX_COLOR;
 	}
-	frame++;
+	m_frame++;
 }
 
 void TitleName::Draw()
 {
 	
 
-	DrawStringToHandle(_X* FONT_SIZE + _SizeX, _Y* FONT_SIZE + _SizeY - 50,
+	DrawStringToHandle(m_posX* FONT_SIZE + m_sizeX, m_posY* FONT_SIZE + m_sizeY - 50,
 				m_titleName.c_str(),
 				GetColor(m_randomcolor.r, m_randomcolor.g, m_randomcolor.b),m_fonthandle);
 	
@@ -34,9 +34,9 @@ void TitleName::Draw()
 
 void TitleName::Create(int x, int y)
 {
-	_X = x;
-	_Y = y;
+	m_posX = x;
+	m_posY = y;
 
-	_SizeX = (SCREEN_X - (5 * FONT_SIZE))/2;////5…表示するstringの1列の文字数
-	_SizeY = (SCREEN_Y - 1 ) / 2;
+	m_sizeX = (SCREEN_X - (5 * FONT_SIZE))/2;////5…表示するstringの1列の文字数
+	m_sizeY = (SCREEN_Y - 1 ) / 2;
 }

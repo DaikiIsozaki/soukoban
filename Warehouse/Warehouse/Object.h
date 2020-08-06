@@ -28,23 +28,23 @@ public:
 
 	virtual int Get_PosX() = 0;
 	virtual int Get_PosY() = 0;
-	virtual int Get_OldPosX() { return _OldPosX; };
-	virtual int Get_OldPosY() { return _OldPosY; };
+	virtual int Get_OldPosX() { return m_oldPosX; };
+	virtual int Get_OldPosY() { return m_oldPosY; };
 
-	virtual bool GetHitbool() { return _bHit; };
+	virtual bool GetHitbool() { return m_bHit; };
 
 	virtual OBJTYPE Get_Type() = 0;
 
 protected:
-	int _PositionX=0;//座標
-	int _PositionY=0;//座標
-	int _OldPosX = 0;//1フレーム前の座標
-	int _OldPosY = 0;//1フレーム前の座標
-	int _SizeX = 0;
-	int _SizeY = 0;
-	int _Speed=0;//速度
+	int m_positionX=0;//座標
+	int m_positionY=0;//座標
+	int m_oldPosX = 0;//1フレーム前の座標
+	int m_oldPosY = 0;//1フレーム前の座標
+	int m_sizeX = 0;
+	int m_sizeY = 0;
+	int m_speed=0;//速度
 	int m_steps=0;//移動したときにカウント
-	bool _bHit=false;
+	bool m_bHit=false;
 
 
 

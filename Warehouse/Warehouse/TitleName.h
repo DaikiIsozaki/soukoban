@@ -30,6 +30,6 @@ private:
 	*/
 	
 
-	int frame = 0;
+	int m_frame = 0;
 };
 

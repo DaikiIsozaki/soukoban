@@ -18,7 +18,7 @@ void MapName::Update()
 void MapName::Draw()
 {
 
-	DrawStringToHandle(_X* OBJ_SIZE + _SizeX, _Y,
+	DrawStringToHandle(m_posX* OBJ_SIZE + m_sizeX, m_posY,
 		ReportMapNumber::GetInstance()->GetMapInfo().c_str(),
 		GetColor(255,0,255),m_fonthandle);	
 
@@ -26,11 +26,11 @@ void MapName::Draw()
 
 void MapName::Create(int x, int y)
 {
-	_X = x;
-	_Y = y;
+	m_posX = x;
+	m_posY = y;
 
-	_SizeX = (SCREEN_X - (ReportMapNumber::GetInstance()->GetMapInfo().length()))/2;
-	_SizeY = (SCREEN_Y - 1) / 2;
+	m_sizeX = (SCREEN_X - (ReportMapNumber::GetInstance()->GetMapInfo().length()))/2;
+	m_sizeY = (SCREEN_Y - 1) / 2;
 
 }
 

@@ -9,22 +9,22 @@
 #include "HitMove.h"
 #include"ObjectManager.h"
 
-HitMove* HitMove::instance = nullptr;
+HitMove* HitMove::m_instance = nullptr;
 
 void HitMove::InstanceCreate()
 {
-	if (instance == nullptr)
+	if (m_instance == nullptr)
 	{
-		instance = new HitMove;
+		m_instance = new HitMove;
 	}
 }
 
 void HitMove::InstanceDelete()
 {
-	if (instance != nullptr)
+	if (m_instance != nullptr)
 	{
-		delete instance;
-		instance = nullptr;
+		delete m_instance;
+		m_instance = nullptr;
 	}
 }
 

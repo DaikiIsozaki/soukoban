@@ -44,41 +44,41 @@ void MapSelect::MapExplanation()
 	mapnom = ReportMapNumber::GetInstance()->GetNomber();
 
 	if (mapnom == 1)
-		explanation = "■始まりのステージ";
+		m_explanation = "■始まりのステージ";
 
 	if (mapnom == 2)
-		explanation = "■2のステージ";
+		m_explanation = "■2のステージ";
 
 	if (mapnom == 3)
-		explanation = "■何かいる？3のステージ";
+		m_explanation = "■何かいる？3のステージ";
 
 	if (mapnom == 4)
-		explanation = "■4コメのステージ";
+		m_explanation = "■4コメのステージ";
 
 	if (mapnom == 5)
-		explanation = "■5コメのステージ";
+		m_explanation = "■5コメのステージ";
 
 	if (mapnom == 6)
-		explanation = "■6コメのステージ";
+		m_explanation = "■6コメのステージ";
 
 	if (mapnom == MAP_MAX)
-		explanation = "■最後のステージ";
+		m_explanation = "■最後のステージ";
 
 	
 
 	if (ReportMapNumber::GetInstance()->GetClearCheck(ReportMapNumber::GetInstance()->GetNomber() - 1))
 	{
-		clear = " CLEAR済";
+		m_clear = " CLEAR済";
 		b = g = 0;
 	}
 	else
 	{
-		clear = "";
+		m_clear = "";
 		b = g = 255;
 	}
 
-	ReportMapNumber::GetInstance()->SetMapInfo((explanation+clear));
-	DrawString(m_x, OBJ_SIZE+(SCREEN_Y / 2), (explanation+clear).c_str(), GetColor(255, g, b));
+	ReportMapNumber::GetInstance()->SetMapInfo((m_explanation+m_clear));
+	DrawString(m_x, OBJ_SIZE+(SCREEN_Y / 2), (m_explanation+m_clear).c_str(), GetColor(255, g, b));
 	
 
 }

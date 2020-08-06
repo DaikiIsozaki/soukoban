@@ -28,7 +28,7 @@ private:
 
 	int m_x = 0;//•¶šÀ•W
 
-	std::string explanation;
-	std::string clear;
+	std::string m_explanation;
+	std::string m_clear;
 };
 

@@ -9,8 +9,8 @@
 
 int MapCreate::FileLoad(int mapNo)
 {
-	sprintf(filename,"Map/Map%d.bin",mapNo);
-	FILE* fp = fopen(filename,"rb");
+	sprintf(m_filename,"Map/Map%d.bin",mapNo);
+	FILE* fp = fopen(m_filename,"rb");
 	if (fp == NULL)
 		return -1;
 

@@ -20,7 +20,7 @@ public:
 
 
 private:
-	char filename[MAX_FILE_LENGTH];
+	char m_filename[MAX_FILE_LENGTH];
 
 };
 
